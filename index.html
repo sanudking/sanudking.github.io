@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Welcome</title>
-  <script src="script.js"></script>
-  <script src="three.r134.min.js"></script>
-<script src="vanta.waves.min.js"></script>
-<script>
-VANTA.WAVES({
-  el: "#your-element-selector",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: 0x410c3d
-})
-</script>
-  <link rel="stylesheet" href="styles.css">
-      </head>
+  <title>Sanudking's Site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Optional basic styling -->
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: sans-serif;
+    }
+
+    #vanta-bg {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      z-index: 1;
+    }
+  </style>
+</head>
 <body>
-  <h1>HELLO WORLD!!!!!!!!!!</h1>
-  <b>HI I AM SANU</b>
-  <marquee><b>HI I AM SANU </b> <b>HI I AM SANU </b> <b>HI I AM SANU </b></marquee>
+  <div id="vanta-bg">
+    <div class="content">
+      <h1>HELLO WORLD!</h1>
+      <b>HI I AM SANU</b>
+      <marquee><b>HI I AM SANU</b> <b>HI I AM SANU</b></marquee>
+    </div>
+  </div>
+
+  <!-- Vanta.js and Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+  <script>
+    VANTA.WAVES({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x410c3d
+    });
+  </script>
 </body>
-       </html>
+</html>
